@@ -16,13 +16,11 @@ overlay.addEventListener('click', ()=>{
 
 const form = document.getElementById('form-contato')
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault()
+form.addEventListener('submit', function() {
 
-    // ALERT BONITINHO
     const alert = document.createElement('div')
     alert.innerText = "Mensagem enviada com sucesso! 💚"
-    
+
     alert.style.position = "fixed"
     alert.style.top = "20px"
     alert.style.left = "50%"
@@ -33,15 +31,10 @@ form.addEventListener('submit', function(e) {
     alert.style.borderRadius = "10px"
     alert.style.fontWeight = "600"
     alert.style.zIndex = "99999"
-    alert.style.boxShadow = "0 0 10px #00FF08"
 
     document.body.appendChild(alert)
 
-    // LIMPA O FORMULÁRIO ✨
-    form.reset()
-
-    // envia depois de 2s
     setTimeout(() => {
-        form.submit()
-    }, 2000)
+        alert.remove()
+    }, 5000)
 })
