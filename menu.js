@@ -31,6 +31,7 @@ form.addEventListener('submit', function() {
     alert.style.borderRadius = "10px"
     alert.style.fontWeight = "600"
     alert.style.zIndex = "99999"
+    alert.style.boxShadow = "0 0 10px #00FF08"
 
     document.body.appendChild(alert)
 
